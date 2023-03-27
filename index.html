@@ -117,7 +117,13 @@
         #explanation {
             width: 500px;
         }
-
+		
+		#error-container {
+			display: flex;
+            flex-direction: column;
+            max-height: 600px; /* Add this line to set a fixed height */
+            overflow-y: auto; /* Add this line to make the container scrollable */
+	    }
         #footer {
             text-align: left;
             margin-top: 20px;
@@ -136,6 +142,10 @@
         #logo {
             margin-right: 10px;
         }
+		
+		#fix-error {
+			width: 200px;
+	    }
 
         .btn-dark {
             background-color: #10a37f;

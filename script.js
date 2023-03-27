@@ -143,6 +143,7 @@ async function getNewCodeFromChatbot(apiKey, chatbotQuestion, pythonCode) {
       The user will send you their current program and a request to modify it in some way by either adding, removing, or changing elements in the plot. \n \
       Your output program should be based on the input code. \n \
       You should only output percisely one python program. \n \
+	  Do not use any external libraries other than matplotlib and numpy! \n \
       The program should always start with: import matplotlib\nimport numpy as np\nmatplotlib.use(\"module://matplotlib_pyodide.html5_canvas_backend\")\nimport matplotlib.cm as cm\nfrom matplotlib import pyplot as plt\nfig = plt.figure() \n \
       The program should always end with: plt.show() \n \
       The system should return back the program and should return an explanation of what it did. \n \
