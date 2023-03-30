@@ -129,7 +129,7 @@ async function getNewCodeFromChatbot(apiKey, chatbotQuestion, pythonCode) {
     console.log("Making API call...");
     console.log("API key:", apiKey);
     console.log("Command:", `Command: ${chatbotQuestion}\n\nCurrent Code:\n${pythonCode}`);
-	const model = document.getElementById("model-selector").value;
+    const model = document.getElementById("model-selector").value;
     console.log("Using model:", model);
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
         method: "POST",
