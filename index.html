@@ -200,6 +200,13 @@
                             <div id="python-error"></div> <br> <button id="fix-error" class="btn btn-dark hidden">Try to fix this automatically with GPT</button>
                         </div>
                     </div> <button id="run-code" class="btn btn-dark">GO</button>
+					<div class="d-inline-flex align-items-center">
+						<label for="model-selector" class="form-label me-2">Model:</label>
+						<select id="model-selector" class="form-select" style="width: auto;">
+							<option value="gpt-3.5-turbo" selected>ChatGPT (3.5-turbo)</option>
+							<option value="gpt-4">GPT-4</option>
+						</select>
+                    </div>
                 </div>
                 <div id="plot-and-explanation-container">
                     <div id="plot-container"></div>

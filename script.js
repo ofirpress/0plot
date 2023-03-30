@@ -129,6 +129,8 @@ async function getNewCodeFromChatbot(apiKey, chatbotQuestion, pythonCode) {
     console.log("Making API call...");
     console.log("API key:", apiKey);
     console.log("Command:", `Command: ${chatbotQuestion}\n\nCurrent Code:\n${pythonCode}`);
+	const model = document.getElementById("model-selector").value;
+    console.log("Using model:", model);
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
         method: "POST",
         headers: {
@@ -136,7 +138,7 @@ async function getNewCodeFromChatbot(apiKey, chatbotQuestion, pythonCode) {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            "model": "gpt-3.5-turbo",
+            "model": model, 
             "messages": [{
                     "role": "system",
                     "content": "You are an assistant for programming matplotlib plots. \n \
